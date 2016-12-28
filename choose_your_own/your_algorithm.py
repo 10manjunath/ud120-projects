@@ -40,13 +40,20 @@ plt.show()
 #print accuracy_score(pred, labels_test)
 
 # AdaBoost Classifier
-from sklearn.ensemble import AdaBoostClassifier
-clf = AdaBoostClassifier(n_estimators=100)
+#from sklearn.ensemble import AdaBoostClassifier
+#clf = AdaBoostClassifier(n_estimators=100)
+#clf.fit(features_train, labels_train)
+#pred = clf.predict(features_test)
+#from sklearn.metrics import accuracy_score
+#print accuracy_score(pred, labels_test)
+
+# Random Forest Classifier
+from sklearn.ensemble import RandomForestClassifier
+clf = RandomForestClassifier(n_estimators=100, max_depth=None, min_samples_split=2, random_state=0)
 clf.fit(features_train, labels_train)
 pred = clf.predict(features_test)
 from sklearn.metrics import accuracy_score
 print accuracy_score(pred, labels_test)
-
 
 
 try:
