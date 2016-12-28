@@ -19,5 +19,14 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
-print len(enron_data)
-print(len(enron_data["WASAFF GEORGE"]))
+#print len(enron_data)
+#print(len(enron_data["WASAFF GEORGE"]))
+
+count = 0
+
+for k, v in enron_data.items():
+	if v["poi"] == True:
+	   count += 1
+
+print count
+
